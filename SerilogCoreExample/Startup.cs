@@ -17,7 +17,7 @@ namespace SerilogCoreExample
 
             Log.Logger = new LoggerConfiguration()
                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-               .WriteTo.RollingFile("logs/log-{Date}.txt", outputTemplate: LogTemplate)
+               .WriteTo.RollingFile("logs/log-{Date}.txt", LogEventLevel.Information, LogTemplate)
                .CreateLogger();
 
             Configuration = configuration;

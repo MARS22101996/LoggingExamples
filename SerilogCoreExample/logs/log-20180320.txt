@@ -1,0 +1,5 @@
+2018-03-20 09:42:28 [Information] Sample informational message
+2018-03-20 09:42:28 [Warning] Sample warning message
+2018-03-20 09:42:28 [Error] Sample error message
+System.ArgumentNullException: Value cannot be null.
+   at WebApplication1.Controllers.HomeController.Index() in D:\Projects\LoggingDemo\SerilogCoreExample\Controllers\HomeController.cs:line 30

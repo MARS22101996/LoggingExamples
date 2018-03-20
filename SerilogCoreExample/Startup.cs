@@ -6,11 +6,11 @@ using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Events;
 
-namespace SerilogCore
+namespace SerilogCoreExample
 {
     public class Startup
     {
-        private const string LogTemplate = "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level}] {Message}{NewLine}{Exception}";
+        private const string LogTemplate = "{Timestamp:yyyy-MM-dd HH:mm:ss} | [{Level}] | SerilogCoreExample 1.0.1 | {Message}{NewLine}{Exception}";
 
         public Startup(IConfiguration configuration)
         {

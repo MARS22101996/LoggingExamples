@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using WebApplication1.Models;
+using SerilogCoreExample.Models;
 
-namespace WebApplication1.Controllers
+namespace SerilogCoreExample.Controllers
 {
     public class HomeController : Controller
     {
@@ -20,7 +17,6 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index()
         {
-            _logger.LogTrace("Sample trace message");
             _logger.LogDebug("Sample debug message");
             _logger.LogInformation("Sample informational message");
             _logger.LogWarning("Sample warning message");
@@ -31,7 +27,7 @@ namespace WebApplication1.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Sample error message");
+                _logger.LogError(e, $"Operation failed due to error: {e.Message}");
             }
 
             return View();

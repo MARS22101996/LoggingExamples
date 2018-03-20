@@ -25,9 +25,9 @@ namespace Logging.Controllers
          {
             throw new ArgumentNullException();
          }
-         catch (Exception e)
+         catch (Exception ex)
          {
-            _logger.Error(e, "Sample error message");
+            _logger.Error(ex, $"Operation failed due to error: {ex.Message}");
          }
 
          return View();

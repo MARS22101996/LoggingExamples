@@ -16,7 +16,6 @@ namespace Logging.Controllers
 
       public ActionResult Index()
       {
-         _logger.Trace("Sample trace message");
          _logger.Debug("Sample debug message");
          _logger.Info("Sample informational message");
          _logger.Warning("Sample warning message");
